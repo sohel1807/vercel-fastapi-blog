@@ -8,7 +8,7 @@ A tiny website: Markdown posts, Jinja templates, FastAPI, ready for Vercel.
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn api.index:app --reload
+uvicorn index:app --reload
 ```
 
 Open http://127.0.0.1:8000
@@ -31,6 +31,4 @@ Your Markdown here.
 
 1. Push this folder to GitHub.
 2. Import the repo in [Vercel](https://vercel.com/new).
-3. Deploy. Framework preset can stay as Other.
-
-`vercel.json` sends every request to the FastAPI app in `api/index.py`.
+3. Deploy. Vercel should detect FastAPI from `index.py`.

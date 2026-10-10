@@ -9,13 +9,12 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent
 POSTS_DIR = ROOT / "posts"
 TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 
 app = FastAPI(title="A small blog")
-app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 
 
@@ -98,3 +97,6 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
             status_code=404,
         )
     return HTMLResponse(str(exc.detail), status_code=exc.status_code)
+
+
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
