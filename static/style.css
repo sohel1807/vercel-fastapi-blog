@@ -1,0 +1,139 @@
+:root {
+  --bg: #f7f4ee;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --line: #e7e0d4;
+  --link: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 42rem;
+  padding: 2rem 1.25rem 4rem;
+  font: 18px/1.55 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.site-header,
+footer {
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.mark {
+  font-weight: 650;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a {
+  color: var(--link);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  font-weight: 650;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.lede,
+.meta,
+footer,
+time,
+.post-list p {
+  color: var(--muted);
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.post-list li {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.post-list time {
+  display: block;
+  font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+  margin-bottom: 0.2rem;
+}
+
+.post-list a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.post-list a:hover {
+  text-decoration: underline;
+}
+
+.post-list p {
+  margin: 0.35rem 0 0;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.post pre,
+.post code {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.88em;
+}
+
+.post pre {
+  overflow-x: auto;
+  padding: 0.9rem 1rem;
+  background: #efeae0;
+  border-radius: 6px;
+}
+
+.post :not(pre) > code {
+  background: #efeae0;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}

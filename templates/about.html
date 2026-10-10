@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <article class="post">
+    <h1>About</h1>
+    <p>
+      This is a small blog. Posts live as <code>.md</code> files in
+      <code>posts/</code>. FastAPI reads them, turns Markdown into HTML, and
+      Vercel runs the app as a Python function.
+    </p>
+    <p>
+      To publish a new note, add a file like <code>posts/my-note.md</code> with
+      a title, date, and summary in the header, then redeploy.
+    </p>
+  </article>
+{% endblock %}
